@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Shopping list</title>
+    <style>
+        p {
+            color: yellow;
+            font-family: "arial", sans-serif;
+            font-size: 1.2em;
+        }
+
+        body{
+            color: white;
+            background-color: black;
+        }
+
+        .sale{
+            font-style: italic;
+        }
+
+        li.important{
+            text-transform: uppercase;
+        }
+
+        #purchases{
+            border: 1px solid white;
+            background-color: #333333;
+            color: #ccc;
+            padding: 5em;
+        }
+        
+        #purchases li{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>What to buy</h1>
+    <p title="a gentle reminder">Don't forget to buy this stuff.</p>
+    <p>This is just a test.</p>
+    <ul id="purchases">
+        <li>A tin of beans</li>
+        <li class="sale">Cheese</li>
+        <li class="sale important">Milk</li>
+        <a class="important">test text</a>
+    </ul>
+
+    <script>
+        // var paras = document.getElementsByTagName("p");
+        // for (var i = 0; i < paras.length; i++){
+        //     alert(paras[i].getAttribute("title"));
+        // }
+
+        var shopping = document.getElementById("purchases");
+        alert(shopping.getAttribute("title"));
+        shopping.setAttribute("title", "a list of goods");
+        alert(shopping.getAttribute("title"));
+    </script>
+</body>
+</html>
